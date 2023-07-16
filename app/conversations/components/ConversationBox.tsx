@@ -23,7 +23,7 @@ const ConversationBox = ({ data, selected }: ConversationBoxProps) => {
   const session = useSession();
 
   const handleClick = useCallback(()=>{
-    router.push(`/conversatioins/${data.id}`);
+    router.push(`/conversations/${data.id}`);
   },[data.id,router]);
 
 
