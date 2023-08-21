@@ -1,5 +1,4 @@
 import bcrypt from 'bcrypt'
-
 import prisma from "@/app/libs/prismadb"
 
 import {NextResponse} from "next/server";
@@ -20,6 +19,7 @@ export async function POST(request:Request){
                 hashedPassword
             }
         })
+        
         return NextResponse.json(user,{status:201});
     }catch(error:any){
         console.log(error,"registration_error");
